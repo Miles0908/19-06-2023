@@ -1,13 +1,16 @@
 Story{
   position: relative;
   width: 66px;
+
 }
 .Story__Content{
+
   padding: 2px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   text-align: center;
+ 
 }
 
 .Story__Image{
@@ -17,6 +20,7 @@ Story{
   height: 62px;
   border-radius: 50%;
   margin-bottom: 8px;
+  left: -20px;
 }
 
 .Story__Image::before{
@@ -65,7 +69,7 @@ Story{
   bottom: 16px;
   color: #ffffff;
   z-index: 2;
-  left: 50%;
+  left: 44.7%;
   bottom: 35%;
   transform: translateX(-120%);
   background: linear-gradient(
@@ -80,14 +84,19 @@ Story{
   font-size: 10px;
 }
 
+
 .Story__Username {
+  position: relative;
   width: 100%;
   overflow: hidden;
   font-size: 12px;
   text-align: center;
+  left: -22px;
 }
 
 .Story__Username p {
+  position: absolute;
   padding: 0;
   margin: 0;
+ 
 }

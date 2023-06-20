@@ -11,7 +11,7 @@ const Post = ({ post }) => {
   const [like, setLike] = useState(isLike);
 
   const toggleLike = () => {
-    setLike(!like);
+    setLike((prev) => !prev);
   };
 
   return (
@@ -44,26 +44,28 @@ const Post = ({ post }) => {
         <p className="PostActions__Comment">
           <CommentIcon />
         </p>
-        <MessangerIcon />
+        <p>
+          <MessangerIcon />
+        </p>
         <p className="Save">
           <SaveIcon />
         </p>
       </div>
       <div className="PostLikes">
-        {post?.likes?.map((likes) => (
-          <p key={likes?.userId}>
-            <img
-              src={post?.userImage ? post?.userImage : ""}
-              alt={post?.userName}
-            /> 
-             Liked by <b>{likes?.userName}</b> and <b>{likes.numberOfLikes} others</b>
-          </p>
-        ))}
+        <p key={post?.likes?.userId}>
+          <img
+            src={post?.userImage ? post?.userImage : ""}
+            alt={post?.userName}
+          />
+          Liked by <b>{post?.userName}</b> and{" "}
+          <b>{post?.likes?.numberOfLikes} others</b>
+        </p>
       </div>
+
       <div className="PostComment">
         {post?.comments?.map((comments) => (
           <p key={comments?.id}>
-         <b>  {comments?.userName}</b> {comments?.content}
+            <b> {comments?.userName}</b> {comments?.content}
           </p>
         ))}
       </div>

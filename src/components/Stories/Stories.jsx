@@ -3,7 +3,7 @@ import "./index.css";
 import Story from "../Story";
 
 const Stories = ({ stories }) => {
-  console.log(stories);
+ 
 
   return (
     <>
